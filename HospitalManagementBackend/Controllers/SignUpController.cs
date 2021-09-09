@@ -1,4 +1,6 @@
-﻿using HospitalManagementBackend.Request;
+﻿using HospitalManagementBackend.Context;
+using HospitalManagementBackend.Models;
+using HospitalManagementBackend.Request;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,10 +26,26 @@ namespace HospitalManagementBackend.Controllers
         [Route("create")]
         public IActionResult Create(SignUpRequest request)
         {
-            //DB de SSN arama yap
-            //eğer yoksa
-            //ekle
-            return Ok("Successful Mail:" + request.Email + " and pw:" + request.Password + " type: " + request.UserType);
+            using (var context = new HospitalManagementContext())
+            {
+
+                User newUser = new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = request.Name,
+                    Password = request.Password,
+                    Email = request.Email,
+                    Ssn = request.Ssn,
+                    UserType = (UserTypes)request.UserType
+                };
+                context.Users.Add(newUser);
+                context.SaveChanges();
+                
+            }
+                //DB de SSN arama yap
+                //eğer yoksa
+                //ekle
+                return Ok("Successful Mail:" + request.Email + " and pw:" + request.Password + " type: " + request.UserType);
         }
 
 

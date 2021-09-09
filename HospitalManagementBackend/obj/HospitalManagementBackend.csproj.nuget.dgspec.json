@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend.csproj": {}
+    "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\HospitalManagementBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend.csproj": {
+    "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\HospitalManagementBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
+        "projectUniqueName": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
         "projectName": "HospitalManagementBackend",
-        "projectPath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
+        "projectPath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
         "packagesPath": "C:\\Users\\a831762\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\obj\\",
+        "outputPath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a831762\\AppData\\Roaming\\NuGet\\NuGet.Config",

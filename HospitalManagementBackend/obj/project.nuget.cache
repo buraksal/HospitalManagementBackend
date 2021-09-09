@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FklMwqxcMfxXgyNAVR1j+1o4lYPCNPEi2kTeGWuVa8f89alxPySfCDT1M+gbGup3xJXH+D1Umx4peCVQgFjY8A==",
+  "dgSpecHash": "AnhdhN6elvJ44hxJtFGNhiUIp+ZlUP9mnySMJi3Sb6p4/FYN0I1pGtv58xfLPaV9mC6sl2p5fGwNKGOTyIPQcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
+  "projectFilePath": "C:\\Users\\a831762\\source\\repos\\HospitalManagementBackend\\HospitalManagementBackend\\HospitalManagementBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a831762\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\a831762\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HospitalManagementBackend",
+    "\\HospitalManagementBackend\\Context",
+    "\\HospitalManagementBackend\\Controllers",
+    "\\HospitalManagementBackend\\Models",
+    "\\HospitalManagementBackend\\Request"
+  ],
+  "PreviewInSolutionExplorer": false
+}

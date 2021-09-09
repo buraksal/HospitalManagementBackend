@@ -7,7 +7,7 @@ namespace HospitalManagementBackend.Request
 {
     public class SignUpRequest
     {
-        public string UserType { get; set; }
+        public int UserType { get; set; }
         public string Name { get; set; }
         public string Ssn { get; set; }
         public string Email { get; set; }
