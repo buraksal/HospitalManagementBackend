@@ -11,7 +11,7 @@ namespace HospitalManagementBackend.Models
         [Key]
         public Guid UserId { get; set; }
         public Guid PatientId { get; set; }
-        public string Compaint { get; set; }
+        public string Complaint { get; set; }
         public Guid ApproverId { get; set; }
 
     }

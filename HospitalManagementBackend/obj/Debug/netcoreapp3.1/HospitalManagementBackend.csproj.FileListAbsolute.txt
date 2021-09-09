@@ -70,3 +70,4 @@ C:\Users\a831762\source\repos\HospitalManagementBackend\HospitalManagementBacken
 C:\Users\a831762\source\repos\HospitalManagementBackend\HospitalManagementBackend\obj\Debug\netcoreapp3.1\HospitalManagementBackend.csproj.GenerateResource.cache
 C:\Users\a831762\source\repos\HospitalManagementBackend\HospitalManagementBackend\obj\Debug\netcoreapp3.1\HospitalManagementBackend.Migrations.init.resources
 C:\Users\a831762\source\repos\HospitalManagementBackend\HospitalManagementBackend\obj\Debug\netcoreapp3.1\HospitalManagementBackend.Migrations.init1.resources
+C:\Users\a831762\source\repos\HospitalManagementBackend\HospitalManagementBackend\obj\Debug\netcoreapp3.1\HospitalManagementBackend.Migrations.patient.resources

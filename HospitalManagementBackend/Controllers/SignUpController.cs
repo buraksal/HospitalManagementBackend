@@ -28,26 +28,71 @@ namespace HospitalManagementBackend.Controllers
         {
             using (var context = new HospitalManagementContext())
             {
-
-                User newUser = new User()
+                Boolean alreadyExists = false;
+                var userList = (from users in context.Users orderby users.Ssn select users).ToList<User>();
+                foreach (var user in userList)
                 {
-                    Id = Guid.NewGuid(),
-                    Name = request.Name,
-                    Password = request.Password,
-                    Email = request.Email,
-                    Ssn = request.Ssn,
-                    UserType = (UserTypes)request.UserType
-                };
-                context.Users.Add(newUser);
-                context.SaveChanges();
-                
+                    if (request.Ssn.Equals(user.Ssn))
+                    {
+                        alreadyExists = true;
+                    }
+                }
+                if (!alreadyExists)
+                {
+                    User newUser = new User()
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = request.Name,
+                        Password = request.Password,
+                        Email = request.Email,
+                        Ssn = request.Ssn,
+                        UserType = (UserTypes)request.UserType
+                    };
+                    context.Users.Add(newUser);
+                    context.SaveChanges();
+                    return Ok("Successfully added Mail:" + request.Email + " and pw:" + request.Password + " type: " + request.UserType);
+                } else
+                {
+                    return Ok("User with SSN: "+request.Ssn + " already exists in database");
+                }
             }
-                //DB de SSN arama yap
-                //eğer yoksa
-                //ekle
-                return Ok("Successful Mail:" + request.Email + " and pw:" + request.Password + " type: " + request.UserType);
         }
 
-
+        [HttpPost]
+        [Route("createpatient")]
+        public IActionResult CreatePatient(SignUpRequest request)
+        {
+            using (var context = new HospitalManagementContext())
+            {
+                Boolean alreadyExists = false;
+                var userList = (from patient in context.Patients orderby patient.Ssn select patient).ToList<Patient>();
+                foreach (var user in userList)
+                {
+                    if (request.Ssn.Equals(user.Ssn))
+                    {
+                        alreadyExists = true;
+                    }
+                }
+                if (!alreadyExists)
+                {
+                    Patient newPatient = new Patient()
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = request.Name,
+                        Password = request.Password,
+                        Email = request.Email,
+                        Ssn = request.Ssn,
+                        Complaint = request.Complaint
+                    };
+                    context.Patients.Add(newPatient);
+                    context.SaveChanges();
+                    return Ok("Successfully added Mail:" + request.Email + " and pw:" + request.Password);
+                }
+                else
+                {
+                    return Ok("Patient with SSN: " + request.Ssn + " already exists in database");
+                }
+            }
+        }
     }
 }

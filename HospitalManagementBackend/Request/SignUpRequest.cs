@@ -12,5 +12,6 @@ namespace HospitalManagementBackend.Request
         public string Ssn { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Complaint { get; set; }
     }
 }
