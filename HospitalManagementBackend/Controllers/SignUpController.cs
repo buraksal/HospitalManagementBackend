@@ -57,42 +57,5 @@ namespace HospitalManagementBackend.Controllers
                 }
             }
         }
-
-        [HttpPost]
-        [Route("createpatient")]
-        public IActionResult CreatePatient(SignUpRequest request)
-        {
-            using (var context = new HospitalManagementContext())
-            {
-                Boolean alreadyExists = false;
-                var userList = (from patient in context.Patients orderby patient.Ssn select patient).ToList<Patient>();
-                foreach (var user in userList)
-                {
-                    if (request.Ssn.Equals(user.Ssn))
-                    {
-                        alreadyExists = true;
-                    }
-                }
-                if (!alreadyExists)
-                {
-                    Patient newPatient = new Patient()
-                    {
-                        Id = Guid.NewGuid(),
-                        Name = request.Name,
-                        Password = request.Password,
-                        Email = request.Email,
-                        Ssn = request.Ssn,
-                        Complaint = request.Complaint
-                    };
-                    context.Patients.Add(newPatient);
-                    context.SaveChanges();
-                    return Ok("Successfully added Mail:" + request.Email + " and pw:" + request.Password);
-                }
-                else
-                {
-                    return Ok("Patient with SSN: " + request.Ssn + " already exists in database");
-                }
-            }
-        }
     }
 }
